@@ -12,6 +12,7 @@ export enum ChainId {
   Mumbai = 80001,
   Fantom = 250,
   Avax = 43114,
+  AvaxFuji = 43113,
   Bsc = 56,
   Gno = 100,
   Optimism = 10,
@@ -34,6 +35,7 @@ export const CHAIN_NAMES = {
   [ChainId.Fantom]: 'Fantom',
   [ChainId.Arbitrum]: 'Arbitrum',
   [ChainId.Avax]: 'Avax',
+  [ChainId.AvaxFuji]: 'AvaxFuji',
   [ChainId.Bsc]: 'Bsc',
   [ChainId.Gno]: 'Gno',
   [ChainId.Optimism]: 'Optimism',
@@ -116,6 +118,17 @@ export const NETWORK_DETAILS = {
     blockExplorerUrls: ['https://snowtrace.io'],
     chainName: 'Avalanche Network',
     rpcUrls: ['https://api.avax.network/ext/bc/C/rpc'],
+    nativeCurrency: {
+      name: 'AVAX',
+      decimals: 18,
+      symbol: 'AVAX',
+    },
+  },
+  [ChainId.AvaxFuji]: {
+    chainId: '0x' + ChainId.Avax.toString(16),
+    blockExplorerUrls: ['https://testnet.snowtrace.io/'],
+    chainName: 'Avalanche Testnet C-Chain (Fuji)',
+    rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
     nativeCurrency: {
       name: 'AVAX',
       decimals: 18,
