@@ -125,7 +125,7 @@ export const NETWORK_DETAILS = {
     },
   },
   [ChainId.AvaxFuji]: {
-    chainId: '0x' + ChainId.Avax.toString(16),
+    chainId: '0x' + ChainId.AvaxFuji.toString(16),
     blockExplorerUrls: ['https://testnet.snowtrace.io/'],
     chainName: 'Avalanche Testnet C-Chain (Fuji)',
     rpcUrls: ['https://api.avax-test.network/ext/bc/C/rpc'],
