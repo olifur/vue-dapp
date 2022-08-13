@@ -47,7 +47,7 @@ async function activate(externalProvider: ExternalProvider) {
   let _network = null
   let _address = ''
   let _balance = BigNumber.from(0)
-  const getData = (timeout: number = 5000) => {
+  const getData = (timeout: number = 2500) => {
     return new Promise(async (resolve: (val: any[]) => void, reject) => {
       try {
         setTimeout(() => {
@@ -75,7 +75,7 @@ async function activate(externalProvider: ExternalProvider) {
   address.value = _address
   balance.value = _balance.toBigInt()
 
-  const updateBalance = async (interval: number = 10000) => {
+  const updateBalance = async (interval: number = 2500) => {
     setInterval(async () => {
       const _balance = await _signer.getBalance()
       balance.value = _balance.toBigInt()
